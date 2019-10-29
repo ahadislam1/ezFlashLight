@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var displayLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +20,10 @@ class ViewController: UIViewController {
     @IBAction func changeColor(_ sender: UISwitch) {
         if sender.isOn {
             view.backgroundColor = .white
+            displayLabel.textColor = .black
         } else if sender.isOn == false {
             view.backgroundColor = .black
+            displayLabel.textColor = .white
         }
     }
     
